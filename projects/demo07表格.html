@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+  <style>
+    body {
+      font-family: arial;
+        }
+    .my {
+      width: 600px;
+      margin:0 auto;
+    }
+    .my>.mytable{
+      margin-top: 30px;
+    }
+    .mytable {
+      width:100%;
+      border-collapse: collapse;
+      border-spacing: 0;
+ 
+    }
+    .mytable tr:nth-child(even) {
+      background-color: #f1f1f1;
+    }
+    .mytable tr {
+      text-align: left;
+        }
+    .my td,th{
+      padding: 8px;
+    }
+    .mytable th {
+      color: #fff;
+      background: #4CAF50;
+      font-weight: bold;
+    }
+    .mytable.a1 th{
+      color:#000;
+      background:#fff;
+      
+    }
+    .mytable.a1 tr {
+      border-left:none;
+      border-right:none;
+       border-top:none;
+    }
+    .a2{
+      border-top:none;
+    }
+    .mytable tr{
+      border: 1px solid #ccc;
+   
+    }
+   
+    
+
+        
+  </style>
+<body>
+<div class='my'>
+  <table class='mytable'>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Points</th>
+    </tr>
+    <tr>
+      <td>Jill</td>
+      <td>Smith</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <td>Eve</td>
+      <td>Jackson</td>
+      <td>94</td>
+    </tr>
+    <tr>
+      <td>Adam</td>
+      <td>Johhson</td>
+      <td>67</td>
+    </tr>
+    <tr>
+      <td>Bo</td>
+      <td>Nilsson</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <td>Mike</td>
+      <td>Ross</td>
+      <td>35</td>
+    </tr>
+  </table>
+  <table class='mytable a1'>
+    <tr class='b'>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Points</th>
+    </tr>
+    <tr>
+      <td>Jill</td>
+      <td>Smith</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <td>Eve</td>
+      <td>Jackson</td>
+      <td>94</td>
+    </tr>
+    <tr>
+      <td>Adam</td>
+      <td>Johhson</td>
+      <td>67</td>
+    </tr>
+    <tr>
+      <td>Bo</td>
+      <td>Nilsson</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <td>Mike</td>
+      <td>Ross</td>
+      <td>35</td>
+    </tr>
+  </table>
+</div>
+</body>
+</html>
