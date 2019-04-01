@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>伪元素三角符号</title>
+    <style>
+            * {
+              margin: 0;
+              padding: 0;
+            }
+            .my {
+              margin: 30px;
+            }
+            .kuang {
+              width: 200px;
+              height: 80px;
+              border: 1px solid #ccc;
+              border-radius: 3px;
+              margin-bottom: 30px;
+              background: #fff;
+              position: relative;
+            }
+            .kuang:before { 
+              content: '';
+              display:inline-block;
+              width: 14px;
+              height: 14px;
+              
+          }
+            .box1 .kuang:before {
+              transform: rotateZ(45deg);
+              position: absolute;
+              top: -8px;
+              left: 10px;
+              background: #fff;
+              border-top:1px solid #ccc;
+              border-left: 1px solid #ccc;
+            }
+            .box2 .kuang:before {
+              position: absolute;
+              right: -1px;
+              top: -1px;
+              border-top:7px solid #f00;
+              border-right: 7px solid #f00;
+              border-bottom:7px solid #fff;
+              border-left: 7px solid #fff;  
+              width: 0;
+              height: 0;
+            }
+            .box3 .kuang:before {
+              transform: rotateZ(45deg);
+              position: absolute;
+              left: 10px;
+              top: -7px;
+              border-top:7px solid #ccc;
+              border-right: 7px solid #fff;
+              border-bottom:7px solid #fff;
+              border-left: 7px solid #ccc;  
+              width: 0;
+              height: 0;
+            }
+          
+          </style>
+</head>
+<body class="my">
+    <div class="box1"><p class=kuang></p></div>
+    <div class="box2"><p class=kuang></p></div>
+    <div class="box3"><p class=kuang></p></div>
+    
+</body>
+</html>
