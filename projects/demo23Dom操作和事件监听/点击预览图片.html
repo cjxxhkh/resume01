@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>dom操作img-preview</title>
+  </head>
+  <body>
+    <ul class="ct">
+      <li data-img="1.png">鼠标放置查看图片1</li>
+      <li data-img="2.png">鼠标放置查看图片2</li>
+      <li data-img="3.png">鼠标放置查看图片3</li>
+    </ul>
+    <div class="img-preview"></div>
+    <script>
+      var list = document.querySelector('.ct')
+      var preview = document.querySelector('.img-preview')
+      var newimg = document.createElement('img')
+
+      list.addEventListener('mouseover', function(e) {
+        if (e.target.tagName.toLowerCase() === 'li') {
+          newimg.src = e.target.getAttribute('data-img')
+          preview.appendChild(newimg)
+        }
+      })
+
+      list.addEventListener('mouseout', function() {
+        preview.removeChild(newimg)
+      })
+    </script>
+  </body>
+</html>
