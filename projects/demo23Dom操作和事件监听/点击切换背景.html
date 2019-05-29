@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>切换样式</title>
+  </head>
+  <body>
+    <style>
+      .box {
+        padding: 10px;
+        border: 1px solid #ccc;
+        box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.14);
+      }
+
+      .box.active {
+        background: #000;
+        color: #fff;
+      }
+    </style>
+    <div class="box">
+      <h1>hello</h1>
+      <p>jirengu</p>
+    </div>
+    <button id="add">add</button>
+    <button id="remove">remove</button>
+    <button id="toggle1">toggle1</button>
+    <button id="toggle2">toggle1</button>
+    <script>
+      function $(a) {
+        return document.querySelector(a)
+      }
+      $('#add').onclick = function() {
+        $('.box').classList.add('active')
+      }
+      $('#remove').onclick = function() {
+        $('.box').classList.remove('active')
+      }
+      $('#toggle1').onclick = function() {
+        $('.box').classList.toggle('active')
+      }
+      $('#toggle2').onclick = function() {
+        if ($('.box').classList.contains('active')) {
+          $('.box').classList.remove('active')
+        } else {
+          $('.box').classList.add('active')
+        }
+      }
+    </script>
+  </body>
+</html>
