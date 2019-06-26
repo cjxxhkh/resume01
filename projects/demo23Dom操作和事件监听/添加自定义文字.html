@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>添加文字</title>
+  </head>
+  <body>
+    <ul class="ct">
+      <li>这里是</li>
+      <li>饥人谷</li>
+      <li>任务班</li>
+    </ul>
+    <input type="text" class="ipt" placeholder="添加内容" />
+    <button class="add-start">开头添加</button>
+    <button class="add-end">结尾添加</button>
+    <script>
+      function $(e) {
+        return document.querySelector(e)
+      }
+      //作用域理解问题
+      //var newli = document.createElement('li')
+      //newli.innerText = $('.ipt').value
+      $('.add-start').addEventListener('click', function() {
+        if ($('.ipt').value !== '') {
+          var newli = document.createElement('li')
+          newli.innerText = $('.ipt').value
+          $('.ct').insertBefore(newli, $('.ct').firstChild)
+        }
+      })
+      $('.add-end').addEventListener('click', function() {
+        if ($('.ipt').value !== '') {
+          var newli = document.createElement('li')
+          newli.innerText = $('.ipt').value
+          $('.ct').appendChild(newli)
+        }
+      })
+    </script>
+  </body>
+</html>
