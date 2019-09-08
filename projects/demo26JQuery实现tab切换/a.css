@@ -1,0 +1,35 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+.mod {
+	margin: 40px;
+}
+.tab {
+	border-top: 1px solid #000;
+	border-left: 1px solid #000;
+	float: left;
+	padding: 5px 20px 5px 20px;
+	background: #ccc;
+}
+.tab.active {
+	background: #fff;
+}
+.header:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.header .tab:last-child {
+	border-right: 1px solid #000;
+}
+.panel {
+	display: none;
+}
+.panel.active {
+	padding: 20px;
+	border: 1px solid #000;
+	width: 300px;
+	height: 200px;
+	display: block;
+}

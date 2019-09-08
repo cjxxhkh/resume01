@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="//code.jquery.com/jquery-1.9.1.min.js"></script>
+  <meta charset="utf-8">
+  <!--
+Created using JS Bin
+http://js.jirengu.com
+
+Copyright (c) 2019 by jirengu (http://js.jirengu.com/fakit/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+  <meta name="robots" content="noindex">
+  <title>图标切换</title>
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_448304_47new50n1nabgldi.css">
+  <style>
+    .iconfont {
+      color: red;
+      font-size: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <span class="play-pause"><i class="iconfont icon-pause "></i></span>
+
+  <script>
+    $('.play-pause').on('click', function () {
+      var $iconfont = $(this).find('.iconfont')
+      $iconfont.toggleClass('icon-pause').toggleClass('icon-play')
+    })
+
+  </script>
+
+  <script src="http://js.jirengu.com/js/render/edit.js?3.25.5"></script>
+  <script>jsbinShowEdit && jsbinShowEdit({ "static": "http://js.jirengu.com", "root": "http://js.jirengu.com" });</script>
+</body>
+
+</html>

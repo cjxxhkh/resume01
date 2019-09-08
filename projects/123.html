@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+<!--	<script>
+	function regFun(val) {
+		var reg='/^ [1 - 9][0 - 9]{ 0,} $/'
+		if(reg.test(val)){
+			return true
+		}else{
+			return false
+		}
+	} 
+	function init(a,b,c) {
+		var resA=regFun(a)
+		console.log(resA)
+				// if (a = /^ [1 - 9][0 - 9]{ 0,} $/) {
+				// 	console.log('hahaha')
+				// }else{
+				// 	console.log('...')
+				// }
+			}
+			var b = 'init'
+			init(b)
+	</script>-->
+	<script>
+		//取a和b之间的正整数组成位数为c的数组
+		function init(a,b,c) {
+			if (a < 0 || b < 0 || c < 1){
+				console.log('参数需为正整数')
+				return false
+			}
+			if (c > b - a) {
+				console.log('区间正整数不够或参数不符合规范')
+				return false
+			}
+			else{
+				if (a + b + c > 0) {
+					console.log('正确')
+					var obj = []
+					var d = b - a + 1
+					for (var i = 0;i < c;i++) {
+						var rand = Math.floor(Math.random() * d + a)
+
+					}
+				}
+				else{
+					console.log('参数需为正整数')
+				}
+			}
+		}
+		init('s',3,1)
+
+		/**
+		 * 判断是否正整数
+		 * */
+		function isNumber(num) {
+			return /^\d+$/.test(num) && typeof num === 'number'
+		}
+		/**
+		 * 获取随机数组
+		 * */
+		function getRandomArr(min, max, len) {
+			// 判断参数类型是否合法
+			if (!isNumber(min) || !isNumber(max) || !isNumber(len)) {
+				console.error('参数必须是正整数')
+				return
+			}
+			// 判断值大小
+			if (min >= max) {
+				console.error('起始值必须小于结束值')
+				return
+			}
+			// 返回值区间
+			if (max - min < len) {
+				console.error('返回值数量超出范围')
+				return
+			}
+			let arr = []
+			for (let i = 0; i < len; i++) {
+				let num = Math.floor(Math.random() * (max - min)) + min
+				if (arr.indexOf(num) === -1) {
+					arr.push(num)
+				} else {
+					i--
+				}
+			}
+			return arr
+		}
+
+
+
+
+				function isNumber(num) {
+						return /^\d+$/.test(num) && typeof num === 'number'
+					}
+		function getRandomArr2(min, max, len) {
+				// 判断参数类型是否合法
+				if (!isNumber(min) || !isNumber(max) || !isNumber(len)) {
+					console.error('参数必须是正整数')
+					return
+				}
+				// 判断值大小
+				if (min >= max) {
+					console.error('起始值必须小于结束值')
+					return
+				}
+				// 返回值区间
+				if (max - min < len) {
+					console.error('返回值数量超出范围')
+					return
+				}
+				let arr = []
+				let curr =[]
+				for (let i = min; i <= max; i++) {
+					arr.push(i)
+				}
+				for (let i = 0; i < len; i++) {
+					let temp = arr.splice(Math.floor(arr.length * Math.random()), 1)
+					curr.push(temp[0])
+				}
+				
+				return curr
+			}
+
+
+					function isNumber(num) {
+							return /^\d+$/.test(num) && typeof num === 'Number'
+						}
+						function sub(min, max, len) {
+							if (!isNumber(min) || !isNumber(max) || !isNumber(len)) {
+								console.error('非法输入')
+								return
+							}
+							if (min >= max) {
+								console.error('非法输入')
+								return
+							}
+							if (max - min < len) {
+								console.error('非法输入')
+								return
+							}
+							let arr1 = []
+							let arr = []
+							for (let i = min; i <= max; i++) {
+								arr1.push(i)
+							}
+							for (let i = 0; i < let; i++) {
+								var rand = arr1.splice(Math.floor(Math.random() * arr1.length), 1)
+								arr.push(rand)
+							}
+							return arr
+						}
+						
+
+
+		//	let abc = [{a:1,b:2,c:3},{a:4,e:5,f:6}]
+			// let arr = []
+			
+			// function obj() {
+			// 	for (let i = 0; i < abc.length; i++) {
+			// 	console.log(abc[i])
+			// 	for (let key in abc[i]) {
+			// 		arr.push(key)
+			// 		console.log(arr)
+			// 		let arr1 = []
+			// 		arr1.push(abc[i][key])
+			// 		console.log(arr1)
+			// 		}
+			// 		arr1.push(arr)
+			// 	}
+			// }
+			// obj()
+//返回包含k值和v值的二元数组
+			let sub = [{ a: 1, b: 2, c: 3 }, { a: 4, b: 5, c: 6 }]
+			let arr1 = []
+			let arr = []
+			//let arr2 = []
+			for (let key in sub[0]) {
+					arr1.push(key)}
+					arr.push(arr1)
+			function obj() {
+				for (let i = 0; i < sub.length; i++) {
+					let arr2 = []
+					for (let key in sub[i]) {
+						//let arr2 = []
+						arr2.push(sub[i][key])
+
+					}		
+					arr.push(arr2)			
+				}
+			}
+			obj()
+
+	getRandomArr2(1,5,2)
+
+	//递归
+	
+	function sub(n) {
+		if (n == 1) {
+			return 1
+		}
+		return n * sub(n-1)
+		
+
+		}
+		let a = sub(4)
+		console.log(a)
+
+
+		//取随机的数组
+
+		function isNumber(num) {
+			return /^\d+$/.test(num) && typeof num === 'Number'
+		}
+		function sub(min,max,len) {
+			if (!isNumber(min) || !isNumber(max) || !isNumber(len)) {
+				console.log('非法输入')
+				return
+			}
+			if (min > max) {
+				console.log('非法输入')
+				return
+			}
+			if (max - min < len) {
+				console.log('非法输入')
+				return
+			}
+			let arr1 = []
+			let arr = []
+			for (let i = min; i <= max; i++) {
+				arr1.push(i)
+			}
+			for (let i = 0;i < let;i++) {
+				let rand = arr1.splice(Math.floor(Math.random() * arr1.length),1)
+				arr.push(rand)
+			}
+			return arr
+		}
+		sub(2,9,5)
+	
+
+
+	</script>
+</body>
+</html>
+
+
+
+
+

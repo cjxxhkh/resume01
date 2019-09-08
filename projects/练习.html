@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function isNumber(num) {
+        return /^\d+$/.test(num) && typeof num === 'number'
+      }
+      function sub(min, max, len) {
+        if (!isNumber(min) || !isNumber(max) || !isNumber(len)) {
+          console.log('非法输入')
+          return
+        }
+        if (min > max) {
+          console.log('非法输入')
+          return
+        }
+        if (max - min < len) {
+          console.log('非法输入')
+          return
+        }
+        let arr1 = []
+        let arr = []
+        for (let i = min; i <= max; i++) {
+          arr1.push(i)
+        }
+        for (let i = 0; i < len; i++) {
+          let rand = arr1.splice(Math.floor(Math.random() * arr1.length), 1)
+          arr.push(rand[0])
+        }
+        return arr
+      }
+      console.log(sub(2, 9, 5))
+  </script>
+</body>
+</html>
