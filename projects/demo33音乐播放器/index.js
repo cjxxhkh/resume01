@@ -38,7 +38,7 @@ var Footer = {
 					{
 						left: '-=' + rowCount * itemWidth
 					},
-					400,
+					500,
 					function() {
 						me.isAnimate = false
 						me.isToStart = false
@@ -60,7 +60,7 @@ var Footer = {
 					{
 						left: '+=' + rowCount * itemWidth
 					},
-					400,
+					500,
 					function() {
 						me.isAnimate = false
 						me.isToEnd = false
