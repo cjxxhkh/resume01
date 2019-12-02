@@ -1,0 +1,13 @@
+* {
+	border: 1px solid #000;
+	margin: 5px;
+	padding: 0;
+}
+body {
+	width: 70%;
+	margin: 0 auto;
+}
+
+header {
+	background-image: "./logo.png";
+}
